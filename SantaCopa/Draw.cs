@@ -50,10 +50,7 @@ namespace SantaCopa
             string secondRandomTeamC = string.Empty;
 
             foreach (var player in players.ToList())
-            {
-                playerRandom = players[random.Next(0, players.Count)];
-                groupRandom = groups[random.Next(0, groups.Count)];
-
+            { 
                 if (counter <= 9)
                 {
                     firstRandomTeam = firstTeam[random.Next(0, firstTeam.Count)];
@@ -89,7 +86,10 @@ namespace SantaCopa
                 {
                     firstRandomTeam = firstRandomTeamC; 
                     secondRandomTeam = secondRandomTeamC;
-                }                    
+                }
+
+                playerRandom = players[random.Next(0, players.Count)];
+                groupRandom = groups[random.Next(0, groups.Count)];
 
                 PlayerTeam playerTeam = new PlayerTeam
                 {
@@ -134,7 +134,7 @@ namespace SantaCopa
             int counter = 0;
 
             ConsoleSpiner spin = new ConsoleSpiner();
-            while (counter <= 1)
+            while (counter <= 10)
             {
                 Thread.Sleep(100);
                 spin.Turn();
