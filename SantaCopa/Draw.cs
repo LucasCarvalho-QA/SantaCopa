@@ -134,7 +134,7 @@ namespace SantaCopa
             int counter = 0;
 
             ConsoleSpiner spin = new ConsoleSpiner();
-            while (counter <= 10)
+            while (counter <= 5)
             {
                 Thread.Sleep(100);
                 spin.Turn();
